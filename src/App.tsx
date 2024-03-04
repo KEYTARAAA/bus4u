@@ -9,9 +9,8 @@ import {
 } from "./Times";
 import Footer from "./components/Footer";
 function App() {
-  const padding = { lg: 150, sm: 50, md: 100, xl: 200 };
   return (
-    <Center px={padding} paddingTop={15}>
+    <Center>
       <VStack w="100%" spacing={0}>
         <Notice />
         <Box bg="black" w="100%" h={100} color="black" />

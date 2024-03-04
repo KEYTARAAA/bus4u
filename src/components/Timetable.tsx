@@ -27,9 +27,6 @@ interface Props {
 function TimeTable({ image, departureTimes, heading }: Props) {
   const borderWidth = 3;
   const borderColor = "gray.200";
-  const fontSizes = { lg: 16, sm: 8, md: 12, xl: 16 };
-  const biggerFontSizes = { lg: 24, sm: 12, md: 16, xl: 24 };
-  const smallerFontSizes = { lg: 12, sm: 4, md: 8, xl: 12 };
   return (
     <>
       <Box w="100%" bg={borderColor} borderWidth={3}>
@@ -39,7 +36,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
         </Center>
       </Box>
       <TableContainer w="100%">
-        <Table w="100%">
+        <Table>
           <Thead>
             <Tr>
               <Th
@@ -78,8 +75,8 @@ function TimeTable({ image, departureTimes, heading }: Props) {
             </Tr>
           </Thead>
           <Tbody>
-            {departureTimes.map((departureTime) => (
-              <Tr>
+            {departureTimes.map((departureTime, index) => (
+              <Tr key={index}>
                 <Td
                   bg="#ffffcc"
                   borderWidth={borderWidth}
@@ -99,7 +96,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                       {"(" + departureTime.locationName + ")"}
                     </Link>
                   </VStack>
-                </Td>{" "}
+                </Td>
                 {departureTime.times.map((time, index) => (
                   <Td
                     bg={
@@ -107,6 +104,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                     }
                     borderWidth={borderWidth}
                     borderColor={borderColor}
+                    key={index}
                   >
                     <Text>{time}</Text>
                   </Td>
