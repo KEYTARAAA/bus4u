@@ -37,7 +37,9 @@ function TimeTable({ image, departureTimes, heading, setWidth }: Props) {
     <>
       <Box w="100%">
         <Box w="100%" bg={borderColor} borderWidth={3}>
-          <Heading textAlign="center">{heading}</Heading>
+          <Heading paddingBottom={2} textAlign="center">
+            {heading}
+          </Heading>
           <Center>
             <Image src={image}></Image>
           </Center>
