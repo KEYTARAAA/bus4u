@@ -47,7 +47,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                 borderWidth={borderWidth}
                 borderColor={borderColor}
               >
-                <Text fontSize={fontSizes}>Departs</Text>
+                <Text>Departs</Text>
               </Th>
               <Th
                 colSpan={6}
@@ -55,7 +55,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                 borderWidth={borderWidth}
                 borderColor={borderColor}
               >
-                <Text fontSize={fontSizes}>Monday to Friday</Text>
+                <Text>Monday to Friday</Text>
               </Th>
               <Th
                 colSpan={3}
@@ -64,7 +64,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                 borderWidth={borderWidth}
                 borderColor={borderColor}
               >
-                <Text fontSize={fontSizes}>Saturday</Text>
+                <Text>Saturday</Text>
               </Th>
               <Th
                 colSpan={2}
@@ -73,7 +73,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                 borderWidth={borderWidth}
                 borderColor={borderColor}
               >
-                <Text fontSize={fontSizes}>Sunday</Text>
+                <Text>Sunday</Text>
               </Th>
             </Tr>
           </Thead>
@@ -86,11 +86,11 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                   borderColor={borderColor}
                 >
                   <VStack>
-                    <Text fontSize={biggerFontSizes}>
+                    <Text fontSize={24}>
                       <strong>{departureTime.stop}</strong>
                     </Text>
                     <Link
-                      fontSize={smallerFontSizes}
+                      fontSize={12}
                       href={departureTime.locationLink}
                       color="blue"
                       textAlign="center"
@@ -108,7 +108,7 @@ function TimeTable({ image, departureTimes, heading }: Props) {
                     borderWidth={borderWidth}
                     borderColor={borderColor}
                   >
-                    <Text fontSize={fontSizes}>{time}</Text>
+                    <Text>{time}</Text>
                   </Td>
                 ))}
               </Tr>
