@@ -1,4 +1,4 @@
-import { Box, HStack, Link, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 
 function Footer() {
   const fontSize = useBreakpointValue({

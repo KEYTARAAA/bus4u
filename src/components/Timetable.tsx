@@ -1,12 +1,10 @@
 import {
   Box,
   Center,
-  Container,
   Heading,
   Image,
   Link,
   Table,
-  TableContainer,
   Tbody,
   Td,
   Text,
