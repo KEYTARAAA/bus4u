@@ -8,13 +8,16 @@ import {
   departureTimesRoscommonToGalway,
 } from "./Times";
 import Footer from "./components/Footer";
+import { useState } from "react";
 function App() {
+  const [width, setWidth] = useState<number>();
   return (
-    <Center>
+    <Center w={width}>
       <VStack w="100%" spacing={0}>
         <Notice />
         <Box bg="black" w="100%" h={100} color="black" />
         <TimeTable
+          setWidth={(width) => setWidth(width)}
           image={RoscommonToGalway}
           departureTimes={departureTimesRoscommonToGalway}
           heading="Roscommon to Galway Bus Service"

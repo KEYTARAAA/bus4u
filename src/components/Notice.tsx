@@ -1,7 +1,7 @@
 import { Box, Link, Text } from "@chakra-ui/react";
 
 function Notice() {
-  const fontSizes = { lg: 30, sm: 15, md: 20, xl: 30 };
+  const fontSizes = { lg: 30, sm: 100, md: 150, xl: 30 };
   const smallerFontSizes = { lg: 20, sm: 10, md: 15, xl: 20 };
   return (
     <Box bg="#fabd05" w="100%" paddingTop={4}>
