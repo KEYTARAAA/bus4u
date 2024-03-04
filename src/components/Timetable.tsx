@@ -1,8 +1,6 @@
 import {
   Box,
   Center,
-  Divider,
-  HStack,
   Heading,
   Image,
   Link,
@@ -15,7 +13,6 @@ import {
   Thead,
   Tr,
   VStack,
-  border,
 } from "@chakra-ui/react";
 import { DepartureTime } from "../Times";
 interface Props {

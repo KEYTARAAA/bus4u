@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Table, VStack } from "@chakra-ui/react";
+import { Box, Center, VStack } from "@chakra-ui/react";
 import Notice from "./components/Notice";
 import TimeTable from "./components/Timetable";
 import GalwayToRoscomon from "./assets/Bus4u_route2A.webp";
