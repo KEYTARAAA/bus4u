@@ -1,10 +1,15 @@
-import { Box, HStack, Link, Text } from "@chakra-ui/react";
+import { Box, HStack, Link, Text, useBreakpointValue } from "@chakra-ui/react";
 
 function Footer() {
-  const fontSize = 16;
+  const fontSize = useBreakpointValue({
+    base: "50",
+    md: "25",
+    lg: "20",
+  });
+  const smallerFontSize = 20;
   return (
     <Box w="100%" paddingTop={15} borderWidth={3} px={3}>
-      <Text fontSize={fontSize} paddingBottom={50}>
+      <Text fontSize={smallerFontSize} paddingBottom={50}>
         <strong>
           Fares to Galway, from...
           <br />
@@ -19,20 +24,18 @@ function Footer() {
           Return Journey and 10 Journey are valid for one month
         </strong>
       </Text>
-      <HStack paddingBottom={4}>
-        <Text fontSize={fontSize}>This</Text>
-        <Text color="blue">
+      <Text fontSize={fontSize}>
+        This{" "}
+        <Text as="span" color={"blue"}>
           <strong>433</strong>
-        </Text>
-        <Text fontSize={fontSize}>
-          bus service is operated by Brendan Boyle Bus and Coach hire.
-        </Text>
-      </HStack>
+        </Text>{" "}
+        bus service is operated by Brendan Boyle Bus and Coach hire.
+      </Text>
       <Text fontSize={fontSize} paddingBottom={4}>
         If you want to make a complaint about your bus trip contact Brendan
         Boyle, Bovinion, Mountbellew.
       </Text>
-      <Text fontSize={fontSize}>
+      <Text paddingTop={10} fontSize={fontSize}>
         <strong>
           If you are not happy with the response from Brendan Boyle contact the
           National Transport Authority, Dun Sceine, Harcourt Lane, Dublin 2
